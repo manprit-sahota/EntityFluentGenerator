@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using MahApps.Metro.Controls;
 using Splendid.POCO.UI.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace Splendid.POCO.UI
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow(IContainer container)
         {
