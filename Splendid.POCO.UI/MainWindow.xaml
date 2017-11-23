@@ -9,7 +9,7 @@
 		xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
 		xmlns:local="clr-namespace:Splendid.POCO.UI"
 		mc:Ignorable="d"
-		Title="Fluent Entity Generator" WindowState="Maximized">
+		Title="Splendid Entity Generator" WindowState="Maximized">
 
     <Window.Resources>
         <Style TargetType="TextBox">
@@ -23,6 +23,11 @@
             <Setter Property="FontSize" Value="15"></Setter>
             <Setter Property="FontWeight" Value="SemiBold"></Setter>
         </Style>
+        <Style TargetType="controls:CustomTextBox">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="0,5"></Setter>
+            <Setter Property="FontSize" Value="16"></Setter>
+        </Style>
     </Window.Resources>
 
     <Grid Margin="10">
@@ -30,6 +35,7 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid>
@@ -103,7 +109,7 @@
 
         </Grid>
 
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -154,11 +160,24 @@
             </GroupBox>
 
             <Grid Grid.Row="1">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="4,0,0,0">
                     <Button Width="200" Margin="0,0,20,0">Generate Selected</Button>
                     <Button Width="200">Generate All</Button>
                 </StackPanel>
             </Grid>
+        </Grid>
+
+        <Grid Grid.Row="3" Background="{StaticResource AccentColorBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0">
+                <TextBlock  Text="Version: " Foreground="White"></TextBlock>
+                <TextBlock Text="1.0.0.0" Foreground="White"></TextBlock>
+            </StackPanel>
+            
         </Grid>
     </Grid>
 </Controls:MetroWindow>
